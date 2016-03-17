@@ -1,23 +1,24 @@
-// var queryURL = "http://api.undata-api.org/WHO/Life%20expectancy%20at%20birth/Kenya/records?app_id=9ed2c241&app_key=09a895dafcf6e70bad03bef56317f454";
+var queryURL = "http://api.undata-api.org/WHO/Life%20expectancy%20at%20birth/Kenya/records?app_id=9ed2c241&app_key=09a895dafcf6e70bad03bef56317f454";
 
-//   $.ajax({url: queryURL, method: 'GET'})
+  $.ajax({url: queryURL, method: 'GET'})
    
-//    .done(function(response) {
+   .done(function(response) {
 
-//        console.log(response);
+       console.log(response);
 
-//        console.log("SetOne: " + response[1].gender + " " + response[1].value);
-//   }); 
-
-
-var countries = ['Kenya', 'Canada', 'United%20States%20of%20America'];
-var queryURL = "http://api.undata-api.org/WHO/Life%20expectancy%20at%20birth/" + countries + "/records?app_id=9ed2c241&app_key=09a895dafcf6e70bad03bef56317f454";
+       console.log("SetOne: " + response[1].gender + " " + response[1].value);
+  }); 
 
 
-$.ajax({url: queryURL, method: 'GET'})
-	 .done(function(response) {
-	     console.log(response);
-	}); 
+// var countries = ['Kenya', 'Canada', 'United%20States%20of%20America'];
+// var queryURL = "http://api.undata-api.org/WHO/Life%20expectancy%20at%20birth/" + countries[0] + "/records?app_id=9ed2c241&app_key=09a895dafcf6e70bad03bef56317f454";
+
+
+// $.ajax({url: queryURL, method: 'GET'})
+// 	 .done(function(response) {
+// 	     console.log(response);
+
+// 	}); 
 
 // function renderOptions(){ 
 // 		$('#country').empty();
