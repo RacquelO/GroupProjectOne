@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Ahmed's Favorite Movies</title>
+
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+	  <h2>Greg's Movies</h2>
+	  <p>These are my favorite movies of all time.</p>            
+	  <table class="table">
+	    <thead>
+	      <tr>
+	        <th>Movie Name</th>
+	        <th>Year</th>
+	        <th>Actors</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	    <!-- Movie Holder 1 -->
+	        <td id="movie1">BLAH</td>
+	        <td id="year1">BLAH</td>
+	        <td id="actors1">BLAH</td>
+	      </tr>
+	      <tr>
+	     <!-- Movie Holder 2 -->
+	        <td id="movie2">BLAH</td>
+	        <td id="year2">BLAH</td>
+	        <td id="actors2">BLAH</td>
+	      </tr>
+	      <tr>
+	      <!-- Movie Holder 2 -->
+	        <td id="movie3">BLAH</td>
+	        <td id="year3">BLAH</td>
+	        <td id="actors3">BLAH</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+
+<!-- Code is pulling stuff from the API -->
+<!-- Specific object regarding the movie the matrix. -->
+<!-- Grabs Jquery -->
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+
+<script type="text/javascript">
+	// Variable for the matrix. Place it into the url
+	var type = 'rad';
+	var type2 = 'gleaming+the+cube';
+	var type3 = "Pee-wee's+big+adventure";
+
+	//Insert movies (building the url)
+	var queryURL = "http://www.omdbapi.com/?t=" + type + "&y=&plot=short&r=json";
+	var queryURL2 = "http://www.omdbapi.com/?t=" + type2 + "&y=&plot=short&r=json";
+	var queryURL3 = "http://www.omdbapi.com/?t=" + type3 + "&y=&plot=short&r=json";
+
+
+	// AJAX calling a function using the 
+	$.ajax({url: queryURL, method: 'GET'})
+
+     // When the ajax is done 
+	 .done(function(response) {
+
+	 	// log the response  
+	    console.log(response);
+
+	    // Switch Movie 1 title to...
+ 	    $("#movie1").html(response.Title);
+ 	    $("#year1").html(response.Year);
+ 	    $("#actors1").html(response.Actors);
+
+	}); 
+
+	//movie 2	 
+	$.ajax({url: queryURL2, method: 'GET'})
+
+	     // When the ajax is done 
+		 .done(function(response) {
+
+		 	// log the response  
+		    console.log(response);
+
+		    // Switch Movie 1 title to...
+	 	    $("#movie2").html(response.Title);
+	 	    $("#year2").html(response.Year);
+	 	    $("#actors2").html(response.Actors);
+
+		}); 
+
+	//movie 3
+
+	$.ajax({url: queryURL3, method: 'GET'})
+
+	     // When the ajax is done 
+		 .done(function(response) {
+
+		 	// log the response  
+		    console.log(response);
+
+		    // Switch Movie 1 title to...
+	 	    $("#movie3").html(response.Title);
+	 	    $("#year3").html(response.Year);
+	 	    $("#actors3").html(response.Actors);
+		}); 
+
+
+
+</script>
+
+</body>
+</html>

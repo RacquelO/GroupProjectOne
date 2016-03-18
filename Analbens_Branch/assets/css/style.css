@@ -1,0 +1,49 @@
+body{
+	background-image: url("../images/world-of-wonder-248661.jpg");
+	
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.jumbotron{
+	opacity: .8;
+    height:200px;
+    margin-top: 30px;
+    border: 2px solid #0F00B5;
+}
+
+.panel,.panel-heading,.panel-body{
+	opacity: .7;
+	width :400px;
+}
+select.form-control{
+	border: 2px solid black;
+}
+#section{
+	border: 2px solid #0F00B5;
+	
+}
+@media screen and (max-width: 980px) {
+
+}
+
+@media screen and (max-width: 768px) {
+	body{
+		background-image: url("../images/aroundworld1.jpg");	
+	}
+ 
+}
+
+@media screen and (max-width: 480px) { 
+	body{
+		background-image: url("../images/world-1.jpg");
+	}
+	
+
+}
+
+
+
+
